@@ -247,6 +247,94 @@ h2{
   margin-top: 8px;
   color: black;
 }
+.main-register{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #e2e2e2;
+  width: 90%;
+  background-color: #fffdf7;
+}
+.form{
+   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.form-register{
+ display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #f1d6e1;
+  width: 450px;
+  height: 610px;
+  background-color: #f7dde7ce;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.div-register{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+.nombre, .contraseña, .email, .pais, .comentarios{
+  width: 400px;
+  justify-content: center;
+  align-self: center;
+  margin-top: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+  display: flex;
+  display: block;
+  justify-content: center;
+}
+.genero{
+   width: 400px;
+  justify-content: center;
+  align-self: center;
+  margin-top: 5px;
+  
+  display: flex;
+  display: block;
+  justify-content: center;
+  flex-direction: row;
+}
+.titulo-form{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+.obligatorio{
+  color: darkmagenta;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+.boton{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  background-color: rgba(255,255,255,0);
+  border: none;
+}
+.boton-login{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+  width: 250px;
+  margin: 10px 0;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #f8c8dc;
+}
+.register{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
 
 @media (max-width: 820px){
   .caja-principal{flex-direction: column}

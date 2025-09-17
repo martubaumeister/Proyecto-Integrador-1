@@ -6,7 +6,7 @@
   <title>Register - GEM</title>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="body-register">
 
 <header class="encabezado">
   <a class="marca" href="index.html">
@@ -40,29 +40,28 @@
       <li><a href="category.html">CARTERAS</a></li>
     </ul>
   </div>
-  <main class="main-login">
-  <form class="for" action="results.html" method="GET">
-    <section  class="forms-login2">
-        <h3 class="titulo-login">REGISTRATE</h3>
-        <div class="div-login">
-                <p class="nombre">Nombre</p>
+  <main class="main-register">
+  <form class="form" action="results.html" method="GET">
+    <section  class="form-register">
+        <h3 class="titulo-form">REGISTRATE</h3>
+        <div class="div-register">
+                <p class="nombre"><strong>Nombre</strong></p>
                 <label for=""></label>
                 <input type="text" name="user" value="">
                 <p class="obligatorio" >Obligatorio*</p>
-         </div>
-         <div class="email">
-                <p  >Email</p>
+         
+        
+                <p  class="email"><strong>Email</strong></p>
                 <label  for=""></label>
                 <input type="email" name="mail" vlaue="">
                 <p class="obligatorio">Obligatorio*</p>
-        </div>
-        <div class="contraseña"  >
-                <p >Contraseña</p>
+       
+                <p class="contraseña" ><strong>Contraseña</strong></p>
                 <label  for=""></label>
                 <input  type="password" name="pass" value="">
-            </div>
-            <div class="pais">
-            <p >Pais de nacimiento</p>
+                 <p class="obligatorio" >Obligatorio*</p>
+
+            <p class="pais"><strong>Pais de nacimiento</strong></p>
             <label for=""></label>
             <select name="Pais" id="">
                 <option value="Ar">Argentina</option>
@@ -71,32 +70,31 @@
                 <option value="Ur">Uruguay</option>
                 <option value="Ch">Chile</option>
             </select>
+             <p class="obligatorio" >Obligatorio*</p>
+
+            <div class="genero2">
+                <p class="genero"><strong>Genero</strong></p>
+                <label class="genero1" for="">Femenino</label>
+                <input  class="genero1"  type="radio" name="femenino" value="">
+                <label  class="genero1" for="">Masculino</label>
+                <input   class="genero1" type="radio" name="masculino" value="">
+                <label   class="genero1" for="">Prefiero no decirlo</label>
+                <input   class="genero1" type="radio" name="otro" value="">
+                 <p class="obligatorio" >Obligatorio*</p>
             </div>
-            <div class="genero">
-                <div>
-                <p >Genero</p>
-                </div>
-                <label for="">Femenino</label>
-                <input  type="radio" name="femenino" value="">
-                <label for="">Masculino</label>
-                <input  type="radio" name="masculino" value="">
-                <label  for="">Prefiero no decirlo</label>
-                <input  type="radio" name="otro" value="">
-            </div>
-            <div >
-                <h3 >Dejanos tus comentarios</h3>
+                <p class="comentarios"><strong>Dejanos tus comentarios</strong></p>
                 <label  for=""></label>
                 <textarea  name="mensaje" id=""></textarea>
-            </div>
             <div class="register">
-                <label for="tyc">Acepto terminos y condiciones</label>
-                <input type="checkbox" name="terminos y condiiones" value="">
+                <label class="register1" for="tyc">Acepto terminos y condiciones</label>
+                <input class="register1" type="checkbox" name="terminos y condiiones" value="">
             </div>
-            <div class="">
+            <div class="boton">
                 <button class="boton-login"  type="submit">Registrarme</button>
                 <button class="boton-login" type="reset">Cancelar</button>
             </div>
-            </section>
+            </div>
+        </section>
         </form>
         </main>
       </div>
