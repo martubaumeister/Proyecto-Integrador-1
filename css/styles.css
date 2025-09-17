@@ -272,6 +272,19 @@ h2{
   margin-top: 5px;
   margin-bottom: 5px;
 }
+.form-login{
+  justify-content: center ;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #f1d6e1;
+  width: 450px;
+  height: 300px;
+  background-color: #f7dde7ce;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .div-register{
   display: flex;
   flex-wrap: wrap;
@@ -290,6 +303,10 @@ h2{
   display: block;
   justify-content: center;
 }
+.registrarse{
+  text-decoration: none;
+  color:  palevioletred;
+}
 .genero{
    width: 400px;
   justify-content: center;
@@ -305,6 +322,7 @@ h2{
   margin-top: 5px;
   margin-bottom: 5px;
   justify-content: center;
+  align-items: center;
 }
 .obligatorio{
   color: darkmagenta;
