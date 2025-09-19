@@ -14,9 +14,9 @@
     <h1 class="marca-texto">GEM</h1>
   </a>
   <div class="acciones">
-    <div class="caja-busqueda">
-      <input type="search" placeholder="Buscar por producto, colección…">
-    </div>
+    <form class="caja-busqueda" action="search-results.html" method="get" role="search">
+  <input type="search" name="q" placeholder="Buscar por producto, colección…">
+</form>
     <nav class="iconos">
       <a href="login.html"> LOG IN </a>
       <a href="register.html">REGISTRÁTE </a>
@@ -28,16 +28,15 @@
   <div class="barra-lateral">
     <h3>Categorías</h3>
     <ul>
-      <li><a href="category.html">TODOS LOS PRODUCTOS</a></li>
-      <li><a href="category.html">REMERAS</a></li>
-      <li><a href="category.html">CAMISAS</a></li>
-      <li><a href="category.html">BUZOS</a></li>
-      <li><a href="category.html">SWEATERS</a></li>
-      <li><a href="category.html">TRAJES</a></li>
-      <li><a href="category.html">JEANS</a></li>
-      <li><a href="category.html">JOGGERS</a></li>
+       <li><a href="category.html">TODOS LOS PRODUCTOS</a></li>
+      <li><a href="category.html">VESTIDOS</a></li>
+      <li><a href="category.html">ZAPATOS</a></li>
+      <li><a href="category.html">RELOJES</a></li>
+      <li><a href="category.html">BEAUTY</a></li>
+      <li><a href="category.html">FRAGANCIAS</a></li>
       <li><a href="category.html">ACCESORIOS</a></li>
       <li><a href="category.html">CARTERAS</a></li>
+      <li><a href="category.html">DEPORTES</a></li>
     </ul>
   </div>
   <main class="main-register">
@@ -45,11 +44,7 @@
     <section  class="form-register">
         <h3 class="titulo-form">REGISTRATE</h3>
         <div class="div-register">
-                <p class="nombre"><strong>Nombre</strong></p>
-                <label for=""></label>
-                <input type="text" name="user" value="">
-                <p class="obligatorio" >Obligatorio*</p>
-         
+                
                 <p  class="email"><strong>Email</strong></p>
                 <label  for=""></label>
                 <input type="email" name="mail" vlaue="">
@@ -60,32 +55,15 @@
                 <input  type="password" name="pass" value="">
                  <p class="obligatorio" >Obligatorio*</p>
 
-                <p class="pais"><strong>Pais de nacimiento</strong></p>
+                 <p class="nombre"><strong>Repetir contraseña</strong></p>
                 <label for=""></label>
-                <select name="Pais" id="">
-                <option value="Ar">Argentina</option>
-                <option value="Br">Brasil</option>
-                <option value="Ve">Venezuela</option>
-                <option value="Ur">Uruguay</option>
-                <option value="Ch">Chile</option>
-                </select>
+                <input type="text" name="user" value="">
                 <p class="obligatorio" >Obligatorio*</p>
-
-                <div class="genero2">
-                <p class="genero"><strong>Genero</strong></p>
-                <label class="genero1" for="">Femenino</label>
-                <input  class="genero1"  type="radio" name="femenino" value="">
-                <label  class="genero1" for="">Masculino</label>
-                <input   class="genero1" type="radio" name="masculino" value="">
-                <label   class="genero1" for="">Prefiero no decirlo</label>
-                <input   class="genero1" type="radio" name="otro" value="">
-                 <p class="obligatorio" >Obligatorio*</p>
-                </div>
-                <p class="comentarios"><strong>Dejanos tus comentarios</strong></p>
-                <label  for=""></label>
-                <textarea  name="mensaje" id=""></textarea>
                 <div class="register">
-                <label class="register1 registrarse-log" for="tyc">Acepto terminos y condiciones</label>
+                <p> <a href="./login.html" class="registrarse-log">ya tengo cuenta</a></p>
+                 </div>
+                <div class="register">
+                <label class="register1 registerr registrarse-log" for="tyc">Acepto terminos y condiciones</label>
                 <input class="register1" type="checkbox" name="terminos y condiiones" value="">
                 </div>
                 <div class="boton">
