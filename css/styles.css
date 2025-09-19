@@ -267,7 +267,7 @@ h2{
   flex-direction: column;
   border: 2px solid #f1d6e1;
   width: 450px;
-  height: 600px;
+  height: 650px;
   background-color: #f7dde7ce;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -395,8 +395,50 @@ h2{
 .tarjeta-cat{ background-color:#fffdf7; border:1px solid #e2e2e2; padding:10px; text-align:center; width: 50%; margin: 10px; display:flex; flex-direction:column; align-items:center } 
 .contenido-category{ display: flex; flex-direction: column; width: 90%; }
 
-
-
+.main-product{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #e2e2e2;
+  width: 100%;
+  background-color: #fffdf7;
+}
+.div-product{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.info-product{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.campera-category{
+    width: 100%;
+}
+.marca{
+    font-size: 20px; 
+}
+.foto-prod{
+    width: 550px;
+    height: 450px;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+}
+.review-prod{
+    border: 1px solid #e2e2e2;
+    width: 90%;
+    height: 100px;
+    margin:20px 0;
+}
+.estrellas{
+    width: 70px;
+}
+.descripcion-prod{
+    margin: 20px 0;
+}
     @media (max-width: 820px){
   .caja-principal{flex-direction: column}
   .barra-lateral{width: 100%}
