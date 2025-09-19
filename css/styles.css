@@ -309,30 +309,14 @@ h2{
   margin-bottom: 5px;
   margin-top: 2px;
 }
-.boton{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-self: center;
-  background-color: rgba(255,255,255,0);
-  border: none;
-}
-.boton-login{
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  width: 250px;
-  margin: 5px 0;
-  border: 1px solid black;
-  border-radius: 8px;
-  background-color: #f8c8dc;
-}
 .register{
   display: flex;
   flex-wrap: wrap;
   margin-top: 5px;
   justify-content: end; 
 }
+
+
 .main-login{ 
     display: flex; 
     flex-direction: column; 
@@ -365,21 +349,40 @@ h2{
     margin-top: 40px; 
     font-size: 25px; 
 } 
+.label-contraseña , .label-email{ 
+    margin-bottom: 10px; 
+} 
 .registrarse-log{ 
     font-size: 13px; 
     color: rgb(71, 70, 70); 
     text-decoration: none;
+}
+.boton{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  background-color: rgba(255,255,255,0);
+  border: none;
+}
+.boton-login{
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 300px;
+  height: 30px;
+  margin: 5px 0;
+  margin-bottom: 40px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: #f8c8dc;
 }
 .ingresar{ 
     color: black; 
     border: none; 
     font-size: 17px; 
     background-color: #f8c8dc; 
-} 
-.label-contraseña , .label-email{ 
-    margin-bottom: 10px; 
-} 
-
+}
 .tarjetas-cat{ 
     display: flex; 
     flex-direction: row; 
