@@ -229,9 +229,9 @@ h2{
   margin: auto;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
   border-top: 1px solid black;
-  padding-top: 12px;
+  padding-top: 15px;
 }
 
 .info-pie h4{
@@ -240,13 +240,19 @@ h2{
 
 .info-pie p,
 .derechos{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .derechos{
   margin-top: 8px;
   color: black;
 }
+
+.info-pie div p { 
+  margin: 10px 0; 
+}
+
+
 .main-register{
   display: flex;
   flex-wrap: wrap;
