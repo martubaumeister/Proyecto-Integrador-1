@@ -251,7 +251,6 @@ h2{
   margin: 10px 0; 
 }
 
-
 .main-register{
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +364,7 @@ h2{
     color: rgb(71, 70, 70); 
     text-decoration: none;
 }
-.boton{
+.boton-form{
   display: flex;
   justify-content: center;
   flex-direction: column;
