@@ -27,7 +27,6 @@ body{
   font-size: 20px; 
 }
 
-
 .logo-ropa{
   height: 32px;
   width: auto;
@@ -115,7 +114,7 @@ body{
   width: auto;
 }
 
-.hero{
+.cajita{
   border: 1px solid #e5e5e5;
   background: #fafafa;
   padding: 20px;
