@@ -145,13 +145,15 @@ h2{
 }
 
 .tarjetas-home{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
   margin: 10px 0 26px;
 }
 
 .tarjeta-home{
+  width: 24%;              
+  margin-bottom: 18px;     
   background: #fffdf7;
   border: 1px solid #e2e2e2;
   padding: 10px;
@@ -168,22 +170,18 @@ h2{
   background: #e3e3e3;
   overflow: hidden;
 }
-
 .imagen-home img{
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .tarjeta-home--destacada{
-  grid-column: span 2;
+  width: 49%;    
 }
-
 .tarjeta-home--destacada .imagen-home{
   height: 320px;
 }
-
 .tarjetas-cat{
   display: flex;
   flex-wrap: wrap;
