@@ -482,11 +482,23 @@ h2{
   .encabezado{width: 850px;}
   .pie{width: 850px;}
   .caja-principal{flex-direction: column}
-  .barra-lateral{width: 100%}
+  .barra-lateral{width: 850px}
   .tarjetas-home{grid-template-columns: repeat(2,1fr)}
   .tarjeta-home--destacada{grid-column: span 2}
   .caja-busqueda input{width: 64vw}
   .tarjeta-cat{width: 100%}
+  .main-register{
+    width:850px;
+  }
+  .main-login{
+    width: 850px;
+  }
+  .contenido-product{
+    width: 850px;
+  }
+  .contenido{
+    width: 850px;
+  }
 }
 @media (max-width: 450px){
   .index{width: 850px;}
@@ -495,5 +507,22 @@ h2{
   background-color: #fff;
   border: solid 1px #f8c8dc;
   padding: 5px;
+  }
+  .main-login{
+    width: 850px;
+  }
+  .main-register{
+    width: 850px;
+  }
+  .barra-lateral{ width: 850px;}
+  .contenido-product{
+    width: 850px;
+  }
+  .contenido{
+    width: 850px;
+  }
+  .mediaimg{
+    width: 100px;
+    height: 40px;
   }
 }
