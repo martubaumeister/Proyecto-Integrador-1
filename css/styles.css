@@ -297,13 +297,12 @@ h2{
 .forms-login{ 
   display: flex; 
   flex-direction: column; 
-  border: 2px solid #f1d6e1; 
-  width: 50%; 
+  width: 100%; 
   justify-content: flex-start; 
   align-items: center; 
   align-self: center; 
   height: 250px; 
-  background-color: #f7dde7ce; 
+  
 } 
 .div-login{
   display: flex;
@@ -311,6 +310,8 @@ h2{
   justify-content: center;
   flex-direction: column;
   align-self: center;
+  background-color: #f7dde7ce; 
+  padding: 20px;
 }
 .titulo-login{ 
   display: flex; 
@@ -366,7 +367,7 @@ h2{
     width: 100%;
     justify-content: center;
     align-items: center;
-    border: solid red 2px;
+    height: 600px;
 }
 .contenido-category{ 
   display: flex; 
@@ -506,7 +507,7 @@ h2{
   .caja-busqueda input{width: 64vw}
   .tarjeta-cat{width: 100%}
   .main-register{ width:850px;}
-  .main-login{width: 850px;}
+  .main-login{width: 900px;}
   .contenido-product{width: 850px;}
   .contenido{width: 850px;}
 }
@@ -517,7 +518,7 @@ h2{
   background-color: #fff;
   border: solid 1px #f8c8dc;
   padding: 5px;}
-  .main-login{width: 850px;}
+  .main-login{width: 900px;}
   .main-register{width: 850px;}
   .barra-lateral{ width: 850px;}
   .contenido-product{width: 850px;}
