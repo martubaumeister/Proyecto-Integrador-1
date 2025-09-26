@@ -477,8 +477,8 @@ h2{
 
     @media (max-width: 820px){
   .index{width: 850px;}
-  .encabezado{width: 850px;}
-  .pie{width: 850px;}
+  .encabezado{width: 900px;}
+  .pie{width: 900px;}
   .caja-principal{flex-direction: column}
   .barra-lateral{width: 850px}
   .tarjetas-home{grid-template-columns: repeat(2,1fr)}
