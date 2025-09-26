@@ -237,7 +237,9 @@ h2{
   background-color: #f7dde7ce;
   margin-top: 5px;
   margin-bottom: 5px;
+  align-self: center;
 }
+
 .div-register{
   display: flex;
   flex-wrap: wrap;
@@ -308,6 +310,7 @@ h2{
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
+  align-self: center;
 }
 .titulo-login{ 
   display: flex; 
@@ -350,7 +353,21 @@ h2{
   font-size: 17px; 
   background-color: #f8c8dc; 
 }
-
+.art-forms{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.article-forms{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: solid red 2px;
+}
 .contenido-category{ 
   display: flex; 
   flex-direction: column; 
