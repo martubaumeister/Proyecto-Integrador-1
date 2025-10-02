@@ -105,12 +105,9 @@ body{
   background: #fff;
 }
 
-.contenido{
-  flex: 1;
-}
+
 
 .contenido-cat{
-  flex: 1;
   width: auto;
 }
 
@@ -413,7 +410,6 @@ h2{
 }
 .estrellas{
   width: 70px;
-
 }
 .descripcion-prod{
   margin: 20px 0;
@@ -452,9 +448,7 @@ h2{
 .info-stock{
   font-size: 15px;
 }
-.cate{
-  display: none;
-}
+
 
 .pie{
   background-color: #f8c8dc;
@@ -498,9 +492,8 @@ h2{
 .lista-{
   list-style: none;
 }
-.a-{
-  text-decoration: none;
-  color: #111;
+.cate{
+  display: none;
 }
     @media (max-width: 820px){
   .index{width: 850px;}
@@ -510,7 +503,7 @@ h2{
   .barra-lateral{width: 850px}
   .caja-busqueda input{width: 64vw}
   .tarjeta-cat{width: 100%}
-  .main-register{ width:850px;}
+  .main-register{ width:900px;}
   .main-login{width: 900px;}
   .contenido-product{width: 850px;}
   .contenido{width: 850px;}

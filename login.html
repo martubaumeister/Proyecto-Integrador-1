@@ -18,7 +18,9 @@
   </a>
   <div class="acciones">
     <div class="caja-busqueda">
+       <form class="caja-busqueda" action="search-results.html" method="get" role="search">
       <input type="search" placeholder="Buscar por producto, colección…">
+      </form>
     </div>
     <nav class="iconos">
       <ul class="ul-list">
@@ -49,7 +51,7 @@
         </nav>
         <section class="forms-login">
             <article class="article-forms">
-                <div class="div-login">
+                <form class="div-login" action="./index.html" method="GET">
                     <h3 class="titulo-login">LOGIN</h3>
                         <label class="email"><strong>Email</strong></label>
                         <input id="email" type="Email" name="email" value="">
@@ -59,9 +61,9 @@
                         <p> <a href="./register.html" class="registrarse-log">No tengo cuenta</a></p>
                     </div>
                     <div class="boton-form">
-                        <button class="boton-login" type="submit" class="ingresar"><a class="a-" href="./index.html">Ingresar</a> </button>
+                        <button class="boton-login" type="submit" class="ingresar">Ingresar</button>
                     </div>
-                </div>
+                </form>
             </article>
         </section>
     </main>
