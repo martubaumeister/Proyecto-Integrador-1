@@ -78,7 +78,6 @@ body{
 }
 
 .barra-lateral{
-  width: 220px;
   background: #fffdf7;
   border: 1px solid #eaeaea;
   padding: 12px;
@@ -105,12 +104,16 @@ body{
   background: #fff;
 }
 
-
-
 .contenido-cat{
-  width: auto;
+  width:100%;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  padding: 7px;
+  margin-bottom: 18px
 }
-
+.cat1{
+  color:  #f8c8dc;
+}
 .cajita{
   border: 1px solid #e5e5e5;
   background: #fafafa;
@@ -379,10 +382,36 @@ h2{
   width: 100%;
   background-color: #fffdf7;
 }
+
+.contenido-product{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 900px;
+}
 .div-product{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  width: 900px;
+ 
+}
+.fetch1{
+  flex-direction: column;
+  border: 1px solid  #f8c8dc;
+  ;
+  margin-bottom: 2.5px;
+  padding: 7px;
+}
+.fetch2{
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid  #f8c8dc;
+  margin-bottom: 2.5 px ;
+   padding: 7px;
+}
+.title, .description, .precio, .marca, .categoria, .stock, .tags, .reviews{
+  margin: 5px;
 }
 .info-product{
   display: flex;

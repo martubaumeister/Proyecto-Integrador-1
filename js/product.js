@@ -5,13 +5,29 @@ fetch('https://dummyjson.com/products/category-list')
 .then(function(data){
     console.log(data);
     let category= document.querySelector(".category")
-    category.innerHTML= data
+    barra= ""
+    barra = barra + `<article class="barra-lateral">
+    <p class="contenido-cat">${data[0]} </p> 
+    <p class="contenido-cat">${data[1]} </p> 
+    <p class="contenido-cat">${data[7]} </p>
+    <p class="contenido-cat">${data[8]} </p> 
+    <p class="contenido-cat">${data[12]} </p>
+    <p class="contenido-cat">${data[14]} </p>
+    <p class="contenido-cat">${data[15]} </p> 
+    <p class="contenido-cat">${data[17]} </p>
+    <p class="contenido-cat">${data[19]} </p>
+    <p class="contenido-cat">${data[20]} </p> 
+    <p class="contenido-cat">${data[21]} </p>
+    <p class="contenido-cat">${data[22]} </p>
+    <p class="contenido-cat">${data[23]} </p>        
+    `
+    category.innerHTML= barra
 })
 .catch(function(error){
     console.log(error);
 })
 
-fetch('https://dummyjson.com/products')
+fetch('https://dummyjson.com/products/1')
 .then(function(response){
     return response.json();
 })
@@ -19,38 +35,35 @@ fetch('https://dummyjson.com/products')
     console.log(data);
     let detalle = document.querySelector(".detalle")
     detalle.style.display= "none" 
+    let ocultar= document.querySelector(".reviews")
+    ocultar.style.display= "none"
     let prod = document.querySelector(".div-product")
     
     let descripcion= ""
    
-    for (let i=0; i<data.products.length;i++){
-             descripcion = descripcion + `<article class= "articulo">
-          <p class="title" href="./products.html?id=${data.products[i].title}">Producto:${data.products[i].title}</a>
-          <p class="description">Descripcion:${data.products[i].description} </p>
-          <p class="precio">Precio:${data.products[i].price} </p>
-          <p class="marca">Marca:${data.products[i].brand} </p>
-          <p class="categoria">Categoria:${data.products[i].category} </p>
-          <p class="stock">Stock:${data.products[i].stock} </p>
-          <p class="tags">Tags:${data.products[i].tags} </p>
-        </article>`
-        }
+    descripcion = descripcion + `<article class= "fetch1">
+          <p class="title" href="./products.html?id=${data.title}"><strong>Producto:</strong>${data.title}</a>
+          <p class="description"><strong>Descripcion:</strong>${data.description} </p>
+          <p class="precio"><strong>Precio:</strong>${data.price} </p>
+          <p class="marca"><strong>Marca:</strong>${data.brand} </p>
+          <p class="categoria"><strong>Categoria:</strong>${data.category} </p>
+          <p class="stock"><strong>Stock:</strong>${data.stock} </p>
+          <p class="tags"><strong>Tags:</strong>${data.tags} </p>
+        </article>
+        <article class="fetch2">
+        <h3>Reviews:</h3>
+        <p class="reviews"><strong>Rating:</strong>${data.reviews[0]} </p>
+        <p class="reviews"><strong>Comentario:</strong>${data.reviews[1]} </p>
+        <p class="reviews"><strong>Fecha:</strong>${data.reviews[2]} </p>
+        <p class="reviews"><strong>Usuario:</strong>${data.reviews[3]} </p>
+        </article>
+        `
+        
     prod.innerHTML= descripcion
 
-    let ocultar = document.querySelector(".ocultar")
-    ocultar.style.display= "none" 
-    let reviews = document.querySelector(".reviews")
-    let criticas= ""
-   
-    for (let i=0; i<data.reviews.length;i++){
-             criticas = criticas + `
-             <article class= "articulo">
-          <p class="rate" href="./products.html?id=${data.reviews[i].rating}">Rating:${data.reviews[i].rating}</a>
-          <p class="comment">Comentario:${data.reviews[i].comment} </p>
-          <p class="date">Fecha:${data.reviews[i].date} </p>
-          <p class="usuario">Usuario:${data.reviews[i].reviewerName} </p>
-        </article>`;
-        }
-    reviews.innerHTML= criticas
+
+    
+    
 
 })
 .catch(function(error){
