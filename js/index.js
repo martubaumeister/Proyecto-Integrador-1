@@ -11,3 +11,4 @@ fetch('https://dummyjson.com/products/category-list')
 .catch(function(error){
     console.log(error);
 })
+
