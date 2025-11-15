@@ -518,9 +518,10 @@ h2{
   display: flex;
   flex-direction: row;
 }
-.lista-{
+.lista-home, .lista-login, .lista-register{
   list-style: none;
 }
+
 .cate{
   display: none;
 }
