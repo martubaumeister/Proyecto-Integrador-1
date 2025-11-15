@@ -26,3 +26,41 @@ fetch('https://dummyjson.com/products/category-list')
 .catch(function(error){
     console.log(error);
 })
+
+let form = document.querySelector(".form");
+let email = document.querySelector("#mail");
+let contraseña = document.querySelector("#contraseña")
+let recontraseña = document.querySelector("#recontraseña")
+
+let errorEmail = document.querySelector(".emailE");
+let errorContraseña = document.querySelector(".contraseñaE");
+let errorReContraseña = document.querySelector(".reContra");
+
+let evento = form.addEventListener('submit', function(event){
+    event.preventDefault();
+    validacion = true; 
+    if(email.value == ""){
+        errorEmail.innerText = "Este campo no puede estar vacio";
+        errorEmail.style.display = "block"; 
+        validacion = false; 
+    }
+    if(contraseña.value == ""){
+        errorContraseña.innerText = "Este campo no puede estar vacio";
+        errorContraseña.style.display = "block"; 
+        validacion = false; 
+    }
+    if(contraseña.value.length < 6){
+        errorContraseña.innerText = "La contraseña debe tener al menos 6 caracteres";
+        errorContraseña.style.display = "block";
+        validacion = false;
+    }
+    if(recontraseña.value != contraseña.value){
+        errorReContraseña.innerText = "Las contraseñas no coinciden";
+        errorReContraseña.style.display = "block";
+        validacion = false; 
+    }
+
+    if(validacion == true){
+        this.submit(); 
+    }
+});

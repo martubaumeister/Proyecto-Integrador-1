@@ -43,15 +43,15 @@
             <h3 class="titulo-form">REGISTRATE</h3>
               <div class="div-register">
                 <label class="email" for=""><strong>Email</strong></label>
-                <input type="email" name="mail" value="">
-                <p class="obligatorio">Obligatorio*</p>
+                <input id="mail" type="email" name="mail" value="">
+                <div class="invalid-feedback emailE"></div>
                 <label  class="contraseña"for=""><strong>Contraseña</strong></label>
-                <input  type="password" name="pass" value="">
-                <p class="obligatorio" >Obligatorio*</p>
+                <input  id="contraseña" type="password" name="pass" value="">
+                <div class="invalid-feedback contraseñaE"></div>
 
                 <label class="nombre" for=""><strong>Repetir contraseña</strong></label>                  
-                <input type="password" name="user" value="">
-                <p class="obligatorio" >Obligatorio*</p>
+                <input id="recontraseña" type="password" name="user" value="">
+                <div class="invalid-feedback reContra"></div>
                 <div class="register">
                   <p> <a href="./login.html" class="registrarse-log">Ya tengo cuenta</a></p>
                 </div>

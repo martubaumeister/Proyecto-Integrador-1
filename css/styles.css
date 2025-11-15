@@ -554,3 +554,9 @@ h2{
   height: 40px;
   }
 }
+
+.invalid-feedback{
+  display: none;
+  size: 5px;
+  color: red;
+}
