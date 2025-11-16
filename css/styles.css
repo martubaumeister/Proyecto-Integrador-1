@@ -521,7 +521,9 @@ h2{
 .lista-home, .lista-login, .lista-register{
   list-style: none;
 }
-
+.bienvenida{
+  list-style: none;
+}
 .cate{
   display: none;
 }

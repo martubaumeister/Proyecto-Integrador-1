@@ -29,7 +29,7 @@ fetch('https://dummyjson.com/products/category-list')
 
 let form = document.querySelector(".div-login");
 let email = document.querySelector("#email");
-let contraseña = document.querySelector("#contaseña")
+let contraseña = document.querySelector("#contraseña")
 
 let errorEmail = document.querySelector(".emailE");
 let errorContraseña = document.querySelector(".contraseñaE")
