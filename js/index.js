@@ -34,19 +34,17 @@ fetch('https://dummyjson.com/products')
 .then(function(data){
     console.log(data)
     let seccion1= document.querySelector(".tarjetas-home1")
-    seccion1.style.display= "none"
-
     let seccion2= document.querySelector(".tarjetas-home2")
-    seccion2.style.display= "none"
-
-
     let contenido= document.querySelector(".contenido")
+    
     tarjetas= ""
     for (let i=0; i<data.products.length;i++){
     tarjetas= tarjetas + ` 
     <article class="tarjeta-home">
         <p class="titulo">${data.products[i].title}</p>
         <p class="precio">Precio:${data.products[i].price}</p>
+        <p class="descripcion"> ${data.products[i].description}</p>
+        <img src="">
         <a class="boton"  href="product.html">Ver detalle</a>
       </article>`
     
@@ -58,3 +56,4 @@ fetch('https://dummyjson.com/products')
 .catch(function(error){
     console.log(error)
 })
+

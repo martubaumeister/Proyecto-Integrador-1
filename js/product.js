@@ -40,7 +40,6 @@ fetch('https://dummyjson.com/products/1')
     let prod = document.querySelector(".div-product")
     
     let descripcion= ""
-   
     descripcion = descripcion + `<article class= "fetch1">
           <p class="title" href="./products.html?id=${data.title}"><strong>Producto:</strong>${data.title}</a>
           <p class="description"><strong>Descripcion:</strong>${data.description} </p>
