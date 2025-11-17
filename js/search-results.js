@@ -4,6 +4,8 @@ fetch('https://dummyjson.com/products/category-list')
 })
 .then(function(data){
     console.log(data);
+
+
     let category= document.querySelector(".category")
     barra= ""
     barra = barra + `<article class="barra-lateral">
@@ -37,6 +39,11 @@ let queryStringObj= new URLSearchParams(queryString)
 
 let loQueEscribioElUsuario = queryStringObj.get("q")
 
+let tituloBusqueda = document.querySelector(".titulo-busqueda")
+tituloBusqueda.innerText = `Resultados para: ${loQueEscribioElUsuario}`;
+
+
+
 fetch(`https://dummyjson.com/products/search?q=${loQueEscribioElUsuario}`)
 
 .then(function(response){
@@ -44,13 +51,23 @@ fetch(`https://dummyjson.com/products/search?q=${loQueEscribioElUsuario}`)
 })
 .then(function(data){
     console.log(data)
+
+let resultado = document.querySelector(".resultados-busqueda")
+
     
-    let resultado= document.querySelector(".contenido-form")
+if (data.products.length == 0){
+    resultado.innerHTML = `
+    <p>No hay resultados para el termino: ${loQueEscribioElUsuario}</p>`;
+    return;
+}
+
+
+    
     let producto_search= ""
     for (let i=0; i<data.products.length;i++){
             producto_search = producto_search + `
           <article class="articulo">
-      <a class="name" href="./search-results.html?id=${data.products[i].id}">
+     <a class="name" href="./product.html?id=${data.products[i].id}">
         Name: ${data.products[i].title}
       </a>
       <p class="status">Precio: ${data.products[i].category}</p>
