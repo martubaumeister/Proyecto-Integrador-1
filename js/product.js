@@ -27,7 +27,11 @@ fetch('https://dummyjson.com/products/category-list')
     console.log(error);
 })
 
-fetch('https://dummyjson.com/products/1')
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let id = queryStringObj.get("id")
+
+fetch('https://dummyjson.com/products/1' +id)
 .then(function(response){
     return response.json();
 })
@@ -35,8 +39,7 @@ fetch('https://dummyjson.com/products/1')
     console.log(data);
     let detalle = document.querySelector(".detalle")
     detalle.style.display= "none" 
-    let ocultar= document.querySelector(".reviews")
-    ocultar.style.display= "none"
+    let reviewsA = document.querySelector(".reviews")
     let prod = document.querySelector(".div-product")
     
     let descripcion= ""
@@ -49,14 +52,21 @@ fetch('https://dummyjson.com/products/1')
           <p class="stock"><strong>Stock:</strong>${data.stock} </p>
           <p class="tags"><strong>Tags:</strong>${data.tags} </p>
         </article>
-        <article class="fetch2">
-        <h3>Reviews:</h3>
-        <p class="reviews"><strong>Rating:</strong>${data.reviews[0]} </p>
-        <p class="reviews"><strong>Comentario:</strong>${data.reviews[1]} </p>
-        <p class="reviews"><strong>Fecha:</strong>${data.reviews[2]} </p>
-        <p class="reviews"><strong>Usuario:</strong>${data.reviews[3]} </p>
-        </article>
         `
+    
+        for(let i=0; i < data.reviews.length; i++){
+            reviewsA = reviewsA + `
+            <article class="fetch2">
+                <h3>Reviews:</h3>
+                <p class="reviews"><strong>Rating:</strong>${data.reviews[i].rating} </p>
+                <p class="reviews"><strong>Comentario:</strong>${data.reviews[i].comment} </p>
+                <p class="reviews"><strong>Fecha:</strong>${data.reviews[i].date} </p>
+                <p class="reviews"><strong>Usuario:</strong>${data.reviews[i].reviewerName} </p>
+            </article>`
+        }
+        reviewsA.innerHTML = reviewsA
+      
+       
         
     prod.innerHTML= descripcion
 
