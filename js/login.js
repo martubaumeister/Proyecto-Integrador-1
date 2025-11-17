@@ -7,19 +7,19 @@ fetch('https://dummyjson.com/products/category-list')
     let category= document.querySelector(".category")
     barra= ""
     barra = barra + `<article class="barra-lateral">
-    <p class="contenido-cat">${data[0]} </p> 
-    <p class="contenido-cat">${data[1]} </p> 
-    <p class="contenido-cat">${data[7]} </p>
-    <p class="contenido-cat">${data[8]} </p> 
-    <p class="contenido-cat">${data[12]} </p>
-    <p class="contenido-cat">${data[14]} </p>
-    <p class="contenido-cat">${data[15]} </p> 
-    <p class="contenido-cat">${data[17]} </p>
-    <p class="contenido-cat">${data[19]} </p>
-    <p class="contenido-cat">${data[20]} </p> 
-    <p class="contenido-cat">${data[21]} </p>
-    <p class="contenido-cat">${data[22]} </p>
-    <p class="contenido-cat">${data[23]} </p>        
+    <a class="contenido-cat" href="./category.html">${data[0]} </a> 
+    <a class="contenido-cat" href="./category.html">${data[1]} </a> 
+    <a class="contenido-cat" href="./category.html">${data[7]} </a>
+    <a class="contenido-cat" href="./category.html">${data[8]} </a> 
+    <a class="contenido-cat" href="./category.html">${data[12]} </a>
+    <a class="contenido-cat" href="./category.html">${data[14]} </a>
+    <a class="contenido-cat" href="./category.html">${data[15]} </a> 
+    <a class="contenido-cat" href="./category.html">${data[17]} </a>
+    <a class="contenido-cat" href="./category.html">${data[19]} </a>
+    <a class="contenido-cat" href="./category.html">${data[20]} </a> 
+    <a class="contenido-cat" href="./category.html">${data[21]} </a>
+    <a class="contenido-cat" href="./category.html">${data[22]} </a>
+    <a class="contenido-cat" href="./category.html">${data[23]} </a>         
     `
     category.innerHTML= barra
 })
