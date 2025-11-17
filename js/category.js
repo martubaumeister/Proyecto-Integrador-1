@@ -26,3 +26,32 @@ fetch('https://dummyjson.com/products/category-list')
 .catch(function(error){
     console.log(error);
 })
+
+
+
+
+
+fetch('https://dummyjson.com/products/categories')
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+    console.log(data)
+    let category= document.querySelector(".tarjetas-cat")
+    category.style.display= "none"
+
+    let prendas_cat= document.querySelector(".contenido-cat")
+    prendas= ""
+    for (let i=0; i<data.length;i++){
+    prendas= prendas + ` 
+    <article class="tarjeta-home">
+        <p class="titulo">${data[i].name}</p>
+        <a href=""></a>
+         </article>`
+    
+    prendas_cat.innerHTML= prendas + `<p> FALTA CONECTAR EL URL </p>`
+    }
+})
+.catch(function(error){
+    console.log(error)
+})

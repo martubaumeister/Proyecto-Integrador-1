@@ -104,6 +104,11 @@ body{
   background: #fff;
 }
 
+.falta{
+  background-color: yellow;
+}
+
+
 .contenido-cat{
   width:100%;
   border: 1px solid #e5e5e5;
