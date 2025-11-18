@@ -12,10 +12,10 @@ if(mailUser){
 }; 
 
 let logout = document.querySelector(".logout");
-
-if(logout){
-    localStorage.removeItem(mailUser);
+let eventoLogout = logout.addEventListener('click', function(event){
+    localStorage.clear();
     bienvenida.style.display = "none";
     register.style.display = "block";
     login.style.display = "block";
-};
+})
+console.log(localStorage)
