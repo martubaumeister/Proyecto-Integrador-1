@@ -57,7 +57,7 @@ fetch(`https://dummyjson.com/products/categories/${categoria}`)
         </article>
         `
         conten.innerHTML= categoria
-    
+
 })
       
 
