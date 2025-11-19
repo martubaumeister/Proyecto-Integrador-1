@@ -37,27 +37,28 @@ let queryString = location.search;
 let qsObj = new URLSearchParams(queryString);    
 let categoria = qsObj.get("category");
 
-fetch(`https://dummyjson.com/products/categories/${categoria}`)
+fetch(`https://dummyjson.com/products/category/${categoria}`)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
     console.log(data)
 
-    let conten= document.querySelector(".contenido-cat")
-
-    categoria= 
-        `<article class="tarjeta-cat">
-            <div class="imagen-cat">
-                <img src="${data.products}" alt="producto">
-            </div>
-            <p class="titulo">${data.products.title}</p>
-            <p class="precio">${data.products.price}</p>
-            <a class="boton" href="product.html">Ver detalle</a>
+    let conten= document.querySelector(".prendas-cat")
+    let categoria = ""
+    for(let i=0; i< data.products.length; i++){
+        categoria = categoria + `
+        <article class="tarjeta-cat">
+        <div class="imagen-cat">
+            <img src="${data.products[i].images}" alt="imagen">
+        </div>
+        <p class="titulo">${data.products[i].title}</p>
+            <p class="precio">${data.products[i].price}</p>
+            <a class="boton" href="product.html?id=${data.products[i].id}">Ver detalle</a>
         </article>
         `
         conten.innerHTML= categoria
-
+    }
 })
       
 

@@ -7,19 +7,19 @@ fetch('https://dummyjson.com/products/category-list')
     let category= document.querySelector(".category")
     barra= ""
     barra = barra + `<article class="barra-lateral">
-   <a class="contenido-cat" href="./category.html">${data[0]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[1]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[7]} </a>
-    <a class="contenido-cat" href="./category.html">${data[8]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[12]} </a>
-    <a class="contenido-cat" href="./category.html">${data[14]} </a>
-    <a class="contenido-cat" href="./category.html">${data[15]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[17]} </a>
-    <a class="contenido-cat" href="./category.html">${data[19]} </a>
-    <a class="contenido-cat" href="./category.html">${data[20]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[21]} </a>
-    <a class="contenido-cat" href="./category.html">${data[22]} </a>
-    <a class="contenido-cat" href="./category.html">${data[23]} </a>        
+    <a class="contenido-cat" href="./category.html?category=${data[0]}">${data[0]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[1]}">${data[1]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[7]}">${data[7]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[8]}">${data[8]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[12]}">${data[12]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[14]}">${data[14]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[15]}">${data[15]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[17]}">${data[17]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[19]}">${data[19]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[20]}">${data[20]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[21]}">${data[21]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[22]}">${data[22]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[23]}">${data[23]} </a>        
     `
     category.innerHTML= barra
 })
@@ -36,7 +36,7 @@ let detalle = document.querySelector(".detalle")
     let resultado = queryStringObj.get("id");
     console.log(resultado);
 
-fetch(`https://dummyjson.com/products/1${resultado}`)
+fetch(`https://dummyjson.com/products/${resultado}`)
 .then(function(response){
     return response.json();
 })
@@ -46,6 +46,7 @@ fetch(`https://dummyjson.com/products/1${resultado}`)
     
     let descripcion= ""
     descripcion = descripcion + `<article class= "fetch1">
+        <img class="campera-category" src="${data.images}">
           <p class="title"><strong>Producto:</strong>${data.title}</a>
           <p class="description"><strong>Descripcion:</strong>${data.description} </p>
           <p class="precio"><strong>Precio:</strong>${data.price} </p>
@@ -62,7 +63,7 @@ fetch(`https://dummyjson.com/products/1${resultado}`)
         let ocultar= document.querySelector(".ocultar")
         ocultar.style.display= "none"
 
-        reviewsB
+        let reviewsB = ""
             reviewsB = reviewsB + `
             <article class="fetch2">
                 <h3>Reviews:</h3>
