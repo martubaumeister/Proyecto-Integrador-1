@@ -29,6 +29,8 @@ fetch('https://dummyjson.com/products/category-list')
 
 let detalle = document.querySelector(".detalle")
     detalle.style.display= "none" 
+ let ocultar= document.querySelector(".ocultar")
+        ocultar.style.display= "none"
 
 
     let queryString = location.search;
@@ -45,23 +47,23 @@ fetch(`https://dummyjson.com/products/${resultado}`)
     let prod = document.querySelector(".div-product")
     
     let descripcion= ""
+    for(let i=0; i< data.products.length; i++){
     descripcion = descripcion + `<article class= "fetch1">
-        <img class="campera-category" src="${data.images}">
-          <p class="title"><strong>Producto:</strong>${data.title}</a>
-          <p class="description"><strong>Descripcion:</strong>${data.description} </p>
-          <p class="precio"><strong>Precio:</strong>${data.price} </p>
-          <p class="marca"><strong>Marca:</strong>${data.brand} </p>
-          <p class="categoria"><strong>Categoria:</strong>${data.category} </p>
-          <p class="stock"><strong>Stock:</strong>${data.stock} </p>
-          <p class="tags"><strong>Tags:</strong>${data.tags} </p>
+        <img class="campera-category" src="${data.products[i].images}">
+          <p class="title"><strong>Producto:</strong>${data.products[i].title}</a>
+          <p class="description"><strong>Descripcion:</strong>${data.products[i].description} </p>
+          <p class="precio"><strong>Precio:</strong>${data.products[i].price} </p>
+          <p class="marca"><strong>Marca:</strong>${data.products[i].brand} </p>
+          <p class="categoria"><strong>Categoria:</strong>${data.products[i].category} </p>
+          <p class="stock"><strong>Stock:</strong>${data.products[i].stock} </p>
+          <p class="tags"><strong>Tags:</strong>${data.products[i].tags} </p>
         </article>
         `
     prod.innerHTML= descripcion
 
 
         let reviewsA = document.querySelector(".reviews")
-        let ocultar= document.querySelector(".ocultar")
-        ocultar.style.display= "none"
+       
 
         let reviewsB = ""
             reviewsB = reviewsB + `
@@ -74,6 +76,7 @@ fetch(`https://dummyjson.com/products/${resultado}`)
             </article>`
         
         reviewsA.innerHTML = reviewsB
+    }
      }) 
     
 .catch(function(error){
