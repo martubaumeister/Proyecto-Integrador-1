@@ -54,7 +54,7 @@ fetch(`https://dummyjson.com/products/category/${categoria}`)
         </div>
         <p class="titulo">${data.products[i].title}</p>
             <p class="precio">${data.products[i].price}</p>
-            <a class="boton" href="product.html">Ver detalle</a>
+            <a class="boton" href="product.html?id=${data.products[i].id}">Ver detalle</a>
         </article>
         `
     }
