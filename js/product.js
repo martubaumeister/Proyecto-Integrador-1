@@ -27,24 +27,26 @@ fetch('https://dummyjson.com/products/category-list')
     console.log(error);
 })
 
-let queryString = location.search;
-let queryStringObj = new URLSearchParams(queryString);
-let id = queryStringObj.get("id")
+let detalle = document.querySelector(".detalle")
+    detalle.style.display= "none" 
 
-fetch('https://dummyjson.com/products/1' +id)
+
+    let queryString = location.search;
+    let queryStringObj = new URLSearchParams(queryString);
+    let resultado = queryStringObj.get("id");
+    console.log(resultado);
+
+fetch(`https://dummyjson.com/products/1${resultado}`)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
     console.log(data);
-    let detalle = document.querySelector(".detalle")
-    detalle.style.display= "none" 
-    let reviewsA = document.querySelector(".reviews")
     let prod = document.querySelector(".div-product")
     
     let descripcion= ""
     descripcion = descripcion + `<article class= "fetch1">
-          <p class="title" href="./products.html?id=${data.title}"><strong>Producto:</strong>${data.title}</a>
+          <p class="title"><strong>Producto:</strong>${data.title}</a>
           <p class="description"><strong>Descripcion:</strong>${data.description} </p>
           <p class="precio"><strong>Precio:</strong>${data.price} </p>
           <p class="marca"><strong>Marca:</strong>${data.brand} </p>
@@ -53,28 +55,26 @@ fetch('https://dummyjson.com/products/1' +id)
           <p class="tags"><strong>Tags:</strong>${data.tags} </p>
         </article>
         `
-    
-        for(let i=0; i < data.reviews.length; i++){
-            reviewsA = reviewsA + `
-            <article class="fetch2">
-                <h3>Reviews:</h3>
-                <p class="reviews"><strong>Rating:</strong>${data.reviews[i].rating} </p>
-                <p class="reviews"><strong>Comentario:</strong>${data.reviews[i].comment} </p>
-                <p class="reviews"><strong>Fecha:</strong>${data.reviews[i].date} </p>
-                <p class="reviews"><strong>Usuario:</strong>${data.reviews[i].reviewerName} </p>
-            </article>`
-        }
-        reviewsA.innerHTML = reviewsA
-      
-       
-        
     prod.innerHTML= descripcion
 
 
-    
-    
+        let reviewsA = document.querySelector(".reviews")
+        let ocultar= document.querySelector(".ocultar")
+        ocultar.style.display= "none"
 
-})
+        reviewsB
+            reviewsB = reviewsB + `
+            <article class="fetch2">
+                <h3>Reviews:</h3>
+                <p class="reviews"><strong>Rating:</strong>${data.reviews.rating} </p>
+                <p class="reviews"><strong>Comentario:</strong>${data.reviews.comment} </p>
+                <p class="reviews"><strong>Fecha:</strong>${data.reviews.date} </p>
+                <p class="reviews"><strong>Usuario:</strong>${data.reviews.reviewerName} </p>
+            </article>`
+        
+        reviewsA.innerHTML = reviewsB
+     }) 
+    
 .catch(function(error){
     console.log(error)
 })
