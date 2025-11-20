@@ -66,11 +66,11 @@ if (data.products.length == 0){
     let producto_search= ""
     for (let i=0; i<data.products.length;i++){
             producto_search = producto_search + `
-          <article class="articulo">
-     <a class="name" href="./product.html?id=${data.products[i].id}">
+          <article class="articulo-re">
+     <a class="name-re" href="./product.html?id=${data.products[i].id}">
         Name: ${data.products[i].title}
       </a>
-      <p class="status">Precio: ${data.products[i].category}</p>
+      <p class="status-re">Precio: ${data.products[i].price}</p>
     </article>
   `;
         }

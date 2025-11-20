@@ -119,11 +119,13 @@ body{
 .cat1{
   color:  #f8c8dc;
 }
+
 .cajita{
-  border: 1px solid #e5e5e5;
-  background: #fafafa;
-  padding: 20px;
-  margin-bottom: 18px;
+  background: #fef5f8;
+  padding: 5px;
+  margin: 2px;
+  font-weight: bold;
+  width: 1000px;
 }
 
 h2{
@@ -152,7 +154,7 @@ h2{
 .contenido{
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
+  width: 1600px;
   flex-direction: column;
 }
 
@@ -164,9 +166,10 @@ h2{
 
 }
 
+
 .tarjeta-home{    
   width: 30%;     
-  margin-bottom: 18px;     
+  margin: 5px;    
   background: #fffdf7;
   border: 1px solid #e2e2e2;
   padding: 10px;
@@ -174,6 +177,10 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.descripcion{
+  margin: 10px;
+
 }
 
 .imagen-home{
@@ -205,7 +212,7 @@ h2{
 
 .tarjeta-cat{
   width: 48%;
-  margin-bottom: 20px;
+  margin: 5px;
   background: #fffdf7;
   border: 1px solid #e2e2e2;
   padding: 10px;
@@ -415,8 +422,19 @@ h2{
   padding: 20px;
   border: 1px solid #f8c8dc;
   background: #fffdf7;
+  margin: 5px;
 }
-
+.articulo-re{
+  background-color: #fdebf1;
+  border: 1px solid #f8c8dc;
+  margin: 5px;
+  padding: 10px;
+  width: 800px;
+}
+.name-re{
+  color: black;
+  text-decoration: none;
+}
 .fetch1 img {
   width: 300px;
 }
@@ -427,11 +445,11 @@ h2{
 }
 
 .fetch2{
-  width: 100%;
+  width: 800px;
   flex-direction: column;
   border: 1px solid  #f8c8dc;
-  margin-bottom: 2.5 px ;
-   padding: 7px;
+  padding: 7px;
+  margin: 5px;
 }
 .title, .description, .precio, .marca, .categoria, .stock, .tags, .reviews{
   margin: 5px;

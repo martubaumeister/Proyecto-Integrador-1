@@ -44,8 +44,14 @@ fetch(`https://dummyjson.com/products/category/${categoria}`)
 .then(function(data){
     console.log(data)
 
+    let caja= document.querySelector(".cajita")
+   caja.innerHTML= `<div class="cajita">${data.products[0].category}</div>`
+
     let conten= document.querySelector(".prendas-cat")
     let categoria = ""
+    
+    //`<div class="cajita">${data.products.category}</div>`
+    
     for(let i=0; i< data.products.length; i++){
         categoria = categoria + `
         <article class="tarjeta-cat">

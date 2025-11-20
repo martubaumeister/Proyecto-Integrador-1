@@ -45,6 +45,10 @@ fetch(`https://dummyjson.com/products/${resultado}`)
 .then(function(data){
     console.log(data);
     let prod = document.querySelector(".div-product")
+
+    let caja= document.querySelector(".cajita")
+   caja.innerHTML= `<div class="cajita">${data.title}</div>`
+
     
     let descripcion= `
     <article class= "fetch1">
