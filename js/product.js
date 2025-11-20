@@ -46,11 +46,11 @@ fetch(`https://dummyjson.com/products/${resultado}`)
     console.log(data);
     let prod = document.querySelector(".div-product")
     
-    let descripcion= ""
-     descripcion = descripcion + `<article class= "fetch1">
+    let descripcion= `
+    <article class= "fetch1">
+    <img src="${data.images}">
 
-
-        <img class="campera-category" src="${data.images}">
+       <div class="detalle-js">
           <p class="title"><strong>Producto:</strong>${data.title}</a>
           <p class="description"><strong>Descripcion:</strong>${data.description} </p>
           <p class="precio"><strong>Precio:</strong>${data.price} </p>
@@ -58,6 +58,7 @@ fetch(`https://dummyjson.com/products/${resultado}`)
           <p class="categoria"><strong>Categoria:</strong>${data.category} </p>
           <p class="stock"><strong>Stock:</strong>${data.stock} </p>
           <p class="tags"><strong>Tags:</strong>${data.tags} </p>
+          </div>
         </article>
 
         `
