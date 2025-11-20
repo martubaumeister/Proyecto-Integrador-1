@@ -41,16 +41,17 @@ fetch('https://dummyjson.com/products')
     for (let i=0; i<data.products.length;i++){
     tarjetas= tarjetas + ` 
     <article class="tarjeta-home">
+    <div class="imagen-cat">
+            <img src="${data.products[i].images}" alt="imagen">
+        </div>
         <p class="titulo">${data.products[i].title}</p>
-        <p class="precio">Precio:${data.products[i].price}</p>
+        <p class="precio"><strong>Precio: </strong>${data.products[i].price}</p>
         <p class="descripcion"> ${data.products[i].description}</p>
         <img src="">
-        <a class="boton"  href="product.html">Ver detalle</a>
+        <a class="boton"  href="product.html?id=${data.products[i].id}">Ver detalle</a>
       </article>`
     
-    contenido.innerHTML= `<div class="cajita">Todos los productos</div>
-    <h2 class="seccion1">productos más vendidos</h2>` 
-    + tarjetas
+    seccion1.innerHTML= tarjetas
     }
 })
 .catch(function(error){

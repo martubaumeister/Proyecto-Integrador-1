@@ -109,7 +109,7 @@ body{
 }
 
 
-.contenido-cat{
+.contenido-cat, .contenido{
   width:100%;
   border: 1px solid #e5e5e5;
   background: #fafafa;
@@ -409,12 +409,18 @@ h2{
  
 }
 .fetch1{
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   border: 1px solid  #f8c8dc;
-  ;
   margin-bottom: 2.5px;
   padding: 7px;
 }
+.detalles-js{
+  display: flex;
+  flex-direction: column;
+}
+
 .fetch2{
   width: 100%;
   flex-direction: column;
@@ -575,3 +581,15 @@ h2{
   size: 5px;
   color: red;
 }
+
+.prendas-cat, .tarjetas-home1{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: flex-start;
+  width: 100%;
+}
+.tarjeta-home{
+  padding: 5px;
+}
+
