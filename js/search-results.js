@@ -6,40 +6,40 @@ fetch('https://dummyjson.com/products/category-list')
     console.log(data);
 
 
-    let category= document.querySelector(".category")
-    barra= ""
+    let category= document.querySelector(".category");
+    barra= "";
     barra = barra + `<article class="barra-lateral">
-    <a class="contenido-cat" href="./category.html">${data[0]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[1]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[7]} </a>
-    <a class="contenido-cat" href="./category.html">${data[8]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[12]} </a>
-    <a class="contenido-cat" href="./category.html">${data[14]} </a>
-    <a class="contenido-cat" href="./category.html">${data[15]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[17]} </a>
-    <a class="contenido-cat" href="./category.html">${data[19]} </a>
-    <a class="contenido-cat" href="./category.html">${data[20]} </a> 
-    <a class="contenido-cat" href="./category.html">${data[21]} </a>
-    <a class="contenido-cat" href="./category.html">${data[22]} </a>
-    <a class="contenido-cat" href="./category.html">${data[23]} </a>    
-    `
-    category.innerHTML= barra
+    <a class="contenido-cat" href="./category.html?category=${data[0]}">${data[0]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[1]}">${data[1]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[7]}">${data[7]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[8]}">${data[8]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[12]}">${data[12]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[14]}">${data[14]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[15]}">${data[15]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[17]}">${data[17]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[19]}">${data[19]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[20]}">${data[20]} </a> 
+    <a class="contenido-cat" href="./category.html?category=${data[21]}">${data[21]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[22]}">${data[22]} </a>
+    <a class="contenido-cat" href="./category.html?category=${data[23]}">${data[23]} </a>        
+    `;
+    category.innerHTML= barra;
 })
 .catch(function(error){
     console.log(error);
 })
 
-let oculta= document.querySelector(".se-oculta")
-oculta.style.display= "none"
-let results= document.querySelector(".contenido-form")
+let oculta= document.querySelector(".se-oculta");
+oculta.style.display= "none";
+let results= document.querySelector(".contenido-form");
 
 
-let queryString= location.search
-let queryStringObj= new URLSearchParams(queryString)
+let queryString= location.search;
+let queryStringObj= new URLSearchParams(queryString);
 
-let loQueEscribioElUsuario = queryStringObj.get("q")
+let loQueEscribioElUsuario = queryStringObj.get("q");
 
-let tituloBusqueda = document.querySelector(".titulo-busqueda")
+let tituloBusqueda = document.querySelector(".titulo-busqueda");
 tituloBusqueda.innerText = `Resultados para: ${loQueEscribioElUsuario}`;
 
 
@@ -47,12 +47,12 @@ tituloBusqueda.innerText = `Resultados para: ${loQueEscribioElUsuario}`;
 fetch(`https://dummyjson.com/products/search?q=${loQueEscribioElUsuario}`)
 
 .then(function(response){
-    return response.json()
+    return response.json();
 })
 .then(function(data){
-    console.log(data)
+    console.log(data);
 
-let resultado = document.querySelector(".resultados-busqueda")
+let resultado = document.querySelector(".resultados-busqueda");
 
     
 if (data.products.length == 0){
@@ -61,9 +61,7 @@ if (data.products.length == 0){
     return;
 }
 
-
-    
-    let producto_search= ""
+    let producto_search= "";
     for (let i=0; i<data.products.length;i++){
             producto_search = producto_search + `
           <article class="articulo-re">
@@ -74,9 +72,9 @@ if (data.products.length == 0){
     </article>
   `;
         }
-    resultado.innerHTML= producto_search
+    resultado.innerHTML= producto_search;
     })
 .catch(function(error){
-    console.log(error)
+    console.log(error);
 })
 

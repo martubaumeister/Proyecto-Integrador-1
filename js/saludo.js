@@ -8,7 +8,7 @@ if(mailUser){
     register.style.display = "none"; 
     login.style.display = "none"; 
 
-    bienvenida.innerHTML = `Bienvenido: ${mailUser} <a href="" class='logout'>Log Out </a>`
+    bienvenida.innerHTML = `Bienvenido: ${mailUser} <a href="" class='logout'>Log Out </a>`;
 }; 
 
 let logout = document.querySelector(".logout");
@@ -18,4 +18,4 @@ let eventoLogout = logout.addEventListener('click', function(event){
     register.style.display = "block";
     login.style.display = "block";
 })
-console.log(localStorage)
+console.log(localStorage);

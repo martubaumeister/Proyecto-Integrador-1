@@ -20,17 +20,17 @@ fetch('https://dummyjson.com/products/category-list')
     <a class="contenido-cat" href="./category.html?category=${data[21]}">${data[21]} </a>
     <a class="contenido-cat" href="./category.html?category=${data[22]}">${data[22]} </a>
     <a class="contenido-cat" href="./category.html?category=${data[23]}">${data[23]} </a>        
-    `
-    category.innerHTML= barra
+    `;
+    category.innerHTML= barra;
 })
 .catch(function(error){
     console.log(error);
 })
 
 let cajaCat = document.querySelector(".tarjetas-cat");
-cajaCat.style.display= "none"
-let chau= document.querySelector(".chau")
-chau.style.display="none"
+cajaCat.style.display= "none";
+let chau= document.querySelector(".chau");
+chau.style.display="none";
 
 
 let queryString = location.search;
@@ -42,16 +42,14 @@ fetch(`https://dummyjson.com/products/category/${categoria}`)
     return response.json();
 })
 .then(function(data){
-    console.log(data)
+    console.log(data);
 
-    let caja= document.querySelector(".cajita")
-   caja.innerHTML= `<div class="cajita">${data.products[0].category}</div>`
+    let caja= document.querySelector(".cajita");
+   caja.innerHTML= `<div class="cajita">${data.products[0].category}</div>`;
 
-    let conten= document.querySelector(".prendas-cat")
-    let categoria = ""
-    
-    //`<div class="cajita">${data.products.category}</div>`
-    
+    let conten= document.querySelector(".prendas-cat");
+    let categoria = "";
+        
     for(let i=0; i< data.products.length; i++){
         categoria = categoria + `
         <article class="tarjeta-cat">
@@ -62,14 +60,14 @@ fetch(`https://dummyjson.com/products/category/${categoria}`)
             <p class="precio">${data.products[i].price}</p>
             <a class="boton" href="product.html?id=${data.products[i].id}">Ver detalle</a>
         </article>
-        `
-        conten.innerHTML= categoria
+        `;
+        conten.innerHTML= categoria;
     }
 })
       
 
 .catch(function(error){
-    console.log(error)
+    console.log(error);
     })
 
     

@@ -4,8 +4,8 @@ fetch('https://dummyjson.com/products/category-list')
 })
 .then(function(data){
     console.log(data);
-    let category= document.querySelector(".category")
-    barra= ""
+    let category= document.querySelector(".category");
+    barra= "";
     barra = barra + `<article class="barra-lateral">
     <a class="contenido-cat" href="./category.html?category=${data[0]}">${data[0]} </a> 
     <a class="contenido-cat" href="./category.html?category=${data[1]}">${data[1]} </a> 
@@ -20,17 +20,17 @@ fetch('https://dummyjson.com/products/category-list')
     <a class="contenido-cat" href="./category.html?category=${data[21]}">${data[21]} </a>
     <a class="contenido-cat" href="./category.html?category=${data[22]}">${data[22]} </a>
     <a class="contenido-cat" href="./category.html?category=${data[23]}">${data[23]} </a>        
-    `
-    category.innerHTML= barra
+    `;
+    category.innerHTML= barra;
 })
 .catch(function(error){
     console.log(error);
 })
 
-let detalle = document.querySelector(".detalle")
-    detalle.style.display= "none" 
- let ocultar= document.querySelector(".ocultar")
-        ocultar.style.display= "none"
+let detalle = document.querySelector(".detalle");
+    detalle.style.display= "none" ;
+ let ocultar= document.querySelector(".ocultar");
+        ocultar.style.display= "none";
 
 
     let queryString = location.search;
@@ -44,10 +44,10 @@ fetch(`https://dummyjson.com/products/${resultado}`)
 })
 .then(function(data){
     console.log(data);
-    let prod = document.querySelector(".div-product")
+    let prod = document.querySelector(".div-product");
 
-    let caja= document.querySelector(".cajita")
-   caja.innerHTML= `<div class="cajita">${data.title}</div>`
+    let caja= document.querySelector(".cajita");
+   caja.innerHTML= `<div class="cajita">${data.title}</div>`;
 
     
     let descripcion= `
@@ -55,40 +55,40 @@ fetch(`https://dummyjson.com/products/${resultado}`)
     <img src="${data.images}">
 
        <div class="detalle-js">
-          <p class="title"><strong>Producto:</strong>${data.title}</a>
-          <p class="description"><strong>Descripcion:</strong>${data.description} </p>
-          <p class="precio"><strong>Precio:</strong>${data.price} </p>
-          <p class="marca"><strong>Marca:</strong>${data.brand} </p>
-          <p class="categoria"><strong>Categoria:</strong>${data.category} </p>
-          <p class="stock"><strong>Stock:</strong>${data.stock} </p>
-          <p class="tags"><strong>Tags:</strong>${data.tags} </p>
+          <p class="title"><strong>Producto: </strong> ${data.title}</a>
+          <p class="description"><strong>Descripcion: </strong> ${data.description} </p>
+          <p class="precio"><strong>Precio: </strong> ${data.price} </p>
+          <p class="marca"><strong>Marca: </strong> ${data.brand} </p>
+          <p class="categoria"><strong>Categoria: </strong> ${data.category} </p>
+          <p class="stock"><strong>Stock: </strong> ${data.stock} </p>
+          <p class="tags"><strong>Tags: </strong> ${data.tags} </p>
           </div>
         </article>
 
-        `
-    prod.innerHTML= descripcion
+        `;
+    prod.innerHTML= descripcion;
 
 
-        let reviewsA = document.querySelector(".reviews")
+        let reviewsA = document.querySelector(".reviews");
        
-        let reviewsB = ""
+        let reviewsB = "";
 
             for(let i=0; i<data.reviews.length; i++){
                    reviewsB = reviewsB + `
             <article class="fetch2">
                 <h3>Reviews:</h3>
-                <p class="reviews"><strong>Rating:</strong>${data.reviews[i].rating} </p>
-                <p class="reviews"><strong>Comentario:</strong>${data.reviews[i].comment} </p>
-                <p class="reviews"><strong>Fecha:</strong>${data.reviews[i].date} </p>
-                <p class="reviews"><strong>Usuario:</strong>${data.reviews[i].reviewerName} </p>
-            </article>`
-            }
+                <p class="reviewsP"><strong>Rating: </strong> ${data.reviews[i].rating} </p>
+                <p class="reviewsP"><strong>Comentario: </strong> ${data.reviews[i].comment} </p>
+                <p class="reviewsP"><strong>Fecha: </strong> ${data.reviews[i].date} </p>
+                <p class="reviewsP"><strong>Usuario: </strong> ${data.reviews[i].reviewerName} </p>
+            </article>`;
+            };
          
         
-        reviewsA.innerHTML = reviewsB
+        reviewsA.innerHTML = reviewsB;
     }
      ) 
     
 .catch(function(error){
-    console.log(error)
+    console.log(error);
 })

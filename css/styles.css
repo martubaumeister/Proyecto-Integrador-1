@@ -605,7 +605,7 @@ h2{
   color: red;
 }
 
-.prendas-cat, .tarjetas-home1{
+.prendas-cat, .tarjetas-home1, .tarjetas-home2{
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
@@ -615,4 +615,7 @@ h2{
 .tarjeta-home{
   padding: 5px;
 }
-
+.reviewsP{
+  display: flex;
+  flex-direction: row;
+}
