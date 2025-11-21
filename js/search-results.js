@@ -1,3 +1,22 @@
+let formulario = document.querySelector(".caja-busqueda");
+let campoBusqueda = document.querySelector('input[name="q"]');
+let mensaje = document.querySelector(".error-busqueda");
+
+formulario.addEventListener('submit', function(evento){
+    evento.preventDefault()
+
+    
+    if(campoBusqueda.value.length == 0){
+        mensaje.innerText = "El campo de busqueda no puede estar vacio";
+    }else if(campoBusqueda.value.length < 3){
+        mensaje.innerText = "Debes escribir al menos 3 caracteres";
+    }else{
+        mensaje.innerText = "";
+        formulario.submit();
+    }
+})
+
+
 fetch('https://dummyjson.com/products/category-list')
 .then(function(response){
     return response.json();
