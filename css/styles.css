@@ -619,3 +619,13 @@ h2{
   display: flex;
   flex-direction: row;
 }
+.bienvenidaL{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ul-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

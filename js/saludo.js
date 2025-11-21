@@ -1,4 +1,6 @@
 let mailUser = localStorage.getItem("emailUsuario");
+let logout = document.querySelector(".logout");
+logout.style.display = "none"
 
 if(mailUser){
     let register = document.querySelector(".lista-register");
@@ -7,15 +9,17 @@ if(mailUser){
 
     register.style.display = "none"; 
     login.style.display = "none"; 
+    logout.style.display= "block";
 
-    bienvenida.innerHTML = `Bienvenido: ${mailUser} <a href="" class='logout'>Log Out </a>`;
+    bienvenida.innerHTML = `Bienvenido: ${mailUser}` + bienvenida.innerHTML ;
 }; 
 
-let logout = document.querySelector(".logout");
 let eventoLogout = logout.addEventListener('click', function(event){
     localStorage.clear();
     bienvenida.style.display = "none";
     register.style.display = "block";
     login.style.display = "block";
+    logout.style.display = "none";
 })
 console.log(localStorage);
+bienvenida.style.display = "block"
