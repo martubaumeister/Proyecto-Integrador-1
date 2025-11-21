@@ -125,7 +125,7 @@ body{
   padding: 5px;
   margin: 2px;
   font-weight: bold;
-  
+  width: 100%;
 }
 
 h2{
@@ -454,6 +454,7 @@ h2{
   flex-direction: column;
   border: 1px solid  #f8c8dc;
   padding: 7px;
+  background-color:  #fdebf1;
   margin: 5px;
 }
 .title, .description, .precio, .marca, .categoria, .stock, .tags, .reviews{
@@ -609,19 +610,23 @@ h2{
 .logout{
   display: none;
 }
+.responsive{
+  display: none;
+}
 
  @media (max-width: 820px){
   .index{width: 850px;}
-  .encabezado{width: 900px;}
-  .pie{width: 900px;}
-  .caja-principal{flex-direction: column}
-  .barra-lateral{width: 850px}
-  .caja-busqueda input{width: 64vw}
-  .tarjeta-cat{width: 100%}
+  .encabezado{width: 1000px;}
+  .pie{width:900px;}
+  .caja-principal{flex-direction: column;}
+  .barra-lateral{width: 100%;}
+  .caja-busqueda input{width: 64vw;}
+  .tarjeta-cat{width: 100%;}
   .main-register{ width:900px;}
   .main-login{width: 900px;}
   .contenido-product{width: 850px;}
-  .contenido{width: 850px;}
+  .contenido{width: 920px;}
+
 }
 @media (max-width: 450px){
   .index{width: 850px;}
@@ -634,14 +639,14 @@ h2{
   .main-register{width: 850px;}
   .barra-lateral{ width: 850px;}
   .contenido-product{width: 850px;}
-  .contenido{width: 100%;}
+  .contenido{width: 800px;}
   .mediaimg{
   width: 100px;
   height: 40px;
 }
 .tarjetas-home1{flex-direction: column;}
-.tarjeta-home{width: 100%;}
+.tarjeta-home{width: 700px;}
 html{width: 100%;}
 .fetch1{flex-direction: column;}
-.pie{width: 100%;}
+.pie{width: 785px;}
 }
