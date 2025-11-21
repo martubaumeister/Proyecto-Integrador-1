@@ -1,17 +1,19 @@
 let mailUser = localStorage.getItem("emailUsuario");
 let logout = document.querySelector(".logout");
 logout.style.display = "none";
-
-if(mailUser){
+console.log(logout)
+let bienvenida = document.querySelector(".bienvenida");
     let register = document.querySelector(".lista-register");
     let login = document.querySelector(".lista-login");
-    let bienvenida = document.querySelector(".bienvenida");
+
+if(mailUser){
+    let bienvenidaTexto = document.querySelector(".text_bienvenida");
 
     register.style.display = "none"; 
     login.style.display = "none"; 
     logout.style.display= "block";
 
-    bienvenida.innerHTML = `Bienvenido: ${mailUser}` + bienvenida.innerHTML ;
+    bienvenidaTexto.innerText = `Bienvenido: ${mailUser}` ;
 }; 
 
 logout.addEventListener('click', function(event){
@@ -21,5 +23,6 @@ logout.addEventListener('click', function(event){
     login.style.display = "block";
     logout.style.display = "none";
 })
+
+
 console.log(localStorage);
-bienvenida.style.display = "block"
