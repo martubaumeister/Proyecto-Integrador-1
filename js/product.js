@@ -56,7 +56,7 @@ fetch(`https://dummyjson.com/products/${resultado}`)
 
        <div class="detalle-js">
           <p class="title"><strong>Producto: </strong> ${data.title}</a>
-          <p class="description"><strong>Descripcion: </strong> ${data.description} </p>
+          <p class="description"><strong>Descripción: </strong> ${data.description} </p>
           <p class="precio"><strong>Precio: </strong> ${data.price} </p>
           <p class="marca"><strong>Marca: </strong> ${data.brand} </p>
           <p class="categoria"><strong>Categoria: </strong> ${data.category} </p>

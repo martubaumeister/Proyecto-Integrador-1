@@ -9,7 +9,7 @@ formulario.addEventListener('submit', function(evento){
     if(campoBusqueda.value.length == 0){
         mensaje.innerText = "El campo de busqueda no puede estar vacio";
     }else if(campoBusqueda.value.length < 3){
-        mensaje.innerText = "Debes escribir al menos 3 caracteres";
+        mensaje.innerHTML = `<p class="error-caracteres">Debes escribir al menos 3 caracteres</p>`;
     }else{
         mensaje.innerText = "";
         formulario.submit();
@@ -59,7 +59,7 @@ let queryStringObj= new URLSearchParams(queryString);
 let loQueEscribioElUsuario = queryStringObj.get("q");
 
 let tituloBusqueda = document.querySelector(".titulo-busqueda");
-tituloBusqueda.innerText = `Resultados para: ${loQueEscribioElUsuario}`;
+tituloBusqueda.innerText = `Resultados para: "${loQueEscribioElUsuario}"`;
 
 
 
@@ -76,7 +76,7 @@ let resultado = document.querySelector(".resultados-busqueda");
     
 if (data.products.length == 0){
     resultado.innerHTML = `
-    <p>No hay resultados para el termino: ${loQueEscribioElUsuario}</p>`;
+    <p>No hay resultados para el termino: "${loQueEscribioElUsuario}"</p>`;
     return;
 }
 
