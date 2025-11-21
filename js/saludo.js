@@ -1,8 +1,6 @@
 let mailUser = localStorage.getItem("emailUsuario");
 let logout = document.querySelector(".logout");
-logout.style.display = "none"
-let bienvenida = document.querySelector(".bienvenida"); 
-console.log(bienvenida);
+logout.style.display = "none";
 
 if(mailUser){
     let register = document.querySelector(".lista-register");
@@ -17,9 +15,7 @@ if(mailUser){
 }; 
 console.log(logout)
 
-logout.addEventListener('click', function(){
-
-    console.log("storage-limpiado")
+logout.addEventListener('click', function(event){
     localStorage.clear();
     bienvenida.style.display = "none";
     register.style.display = "block";
